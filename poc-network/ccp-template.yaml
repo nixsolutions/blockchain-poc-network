@@ -1,0 +1,43 @@
+---
+name: first-network-${ORG}
+version: 1.0.0
+client:
+  organization: ${ORG_B}
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  ${ORG_B}:
+    mspid: ${ORG_B}MSP
+    peers:
+      - peer0.${ORG}.poc-network.com
+      - peer1.${ORG}.poc-network.com
+    certificateAuthorities:
+      - ca.${ORG}.poc-network.com
+peers:
+  peer0.${ORG}.poc-network.com:
+    url: grpcs://localhost:${P0PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer0.${ORG}.poc-network.com
+      hostnameOverride: peer0.${ORG}.poc-network.com
+  peer1.${ORG}.poc-network.com:
+    url: grpcs://localhost:${P1PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer1.${ORG}.poc-network.com
+      hostnameOverride: peer1.${ORG}.poc-network.com
+certificateAuthorities:
+  ca.${ORG}.poc-network.com:
+    url: https://localhost:${CAPORT}
+    caName: ca-${ORG}
+    tlsCACerts:
+      pem: |
+        ${CAPEM}
+    httpOptions:
+      verify: false

@@ -30,7 +30,7 @@ git clone https://gitlab.nixdev.co/poc-blockchain/poc_kinder.git
 ```
 On the first server, we will create all the necessary certificates necessary for the operation of our network:
 ```
-cd network / poc-network
+cd network/poc-network
 ./1_generate_connection_files.sh
 ./2_generating_channel_configuration.sh
 ```
@@ -64,7 +64,7 @@ env $ (cat .env | grep ^ [A-Z] | xargs) docker stack deploy -c docker-compose-ge
 ```
 After the stack is created, you need to go to the docker CLI container on the second server:
 ```
-docker exec -ti stage_cli.1.owni217t53m53efjtikb5oa2f / bin / bash
+docker exec -ti stage_cli.1.owni217t53m53efjtikb5oa2f/bin/bash
 ```
 And inside this container, execute all the commands that are contained in the 4_create_channels.sh file at network / poc-network. These commands will create channels, attach all peers to the channel, and establish smart contracts.
 

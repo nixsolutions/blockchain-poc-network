@@ -1,10 +1,10 @@
-#Network
+# Network
 
-##Goal
+## Goal
 
 The main goal of the Network is to provide private transactions between network participants. The network is built using the Hyperledger Fabric 1.4 framework.
 
-##Network members
+## Network members
 
 Hyperledger Fabric corporate network members are Parents, Hospital, and Kindergarten. Members of these organizations interact with each other in two channels. The first parentshospital channel is for conducting private transactions between Parents and Hospital organizations. The second channel "parentshospitalkindergarten" is for transactions between all three organizations.
 
@@ -12,7 +12,7 @@ In the parentshospital channel, medical records and agreements between the membe
 
 The channel parentshospitalkindergarten works with reports that are based on data from medical records.
 
-##Network deployment
+## Network deployment
 
 The network is installed on 4 servers using Docker Swarm. All servers must have git and docker installed. As a result of further actions, each network component will be installed on each server:
 
@@ -58,7 +58,7 @@ Next, you need to generate the .env file
 ```
 ./3_env_gen.sh
 ```
-##Creating a Swarm Stack
+## Creating a Swarm Stack
 ```
 env $ (cat .env | grep ^ [A-Z] | xargs) docker stack deploy -c docker-compose-general.yaml stage 2> & 1
 ```

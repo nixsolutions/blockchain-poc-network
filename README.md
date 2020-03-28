@@ -68,4 +68,4 @@ docker exec -ti stage_cli.1.owni217t53m53efjtikb5oa2f/bin/bash
 ```
 And inside this container, execute all the commands that are contained in the 4_create_channels.sh file at network / poc-network. These commands will create channels, attach all peers to the channel, and establish smart contracts.
 
-For a complete understanding of the role of this application in the Child Medical Record project, refer to the "LINK" article.
+For a complete understanding of the role of this application in the Child Medical Record project, refer to the [article](https://www.google.com).

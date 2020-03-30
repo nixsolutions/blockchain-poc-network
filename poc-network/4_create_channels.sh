@@ -125,28 +125,28 @@ CORE_PEER_LOCALMSPID=ParentsMSP
 CORE_PEER_ADDRESS=peer0.parents.poc-network.com:7051
 CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${PARENTS_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n medical-contract -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer1.parents.poc-network.com
 CORE_PEER_LOCALMSPID=ParentsMSP
 CORE_PEER_ADDRESS=peer1.parents.poc-network.com:8051
 CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${PARENTS_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n medical-contract -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer0.hospital.poc-network.com
 CORE_PEER_LOCALMSPID=HospitalMSP
 CORE_PEER_ADDRESS=peer0.hospital.poc-network.com:9051
 CORE_PEER_MSPCONFIGPATH=${HOSPITAL_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${HOSPITAL_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n medical-contract -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer1.hospital.poc-network.com
 CORE_PEER_LOCALMSPID=HospitalMSP
 CORE_PEER_ADDRESS=peer1.hospital.poc-network.com:10051
 CORE_PEER_MSPCONFIGPATH=${HOSPITAL_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${HOSPITAL_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc -v 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n medical-contractv 1.0 -p "$CC_SRC_PATH" -l "$CC_RUNTIME_LANGUAGE"
 
 # POC_KINDER CHAINCODE
 # Installing smart contract on peer0.parents.poc-network.com
@@ -154,42 +154,42 @@ CORE_PEER_LOCALMSPID=ParentsMSP
 CORE_PEER_ADDRESS=peer0.parents.poc-network.com:7051
 CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${PARENTS_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer1.parents.poc-network.com
 CORE_PEER_LOCALMSPID=ParentsMSP
 CORE_PEER_ADDRESS=peer1.parents.poc-network.com:8051
 CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${PARENTS_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer0.hospital.poc-network.com
 CORE_PEER_LOCALMSPID=HospitalMSP
 CORE_PEER_ADDRESS=peer0.hospital.poc-network.com:9051
 CORE_PEER_MSPCONFIGPATH=${HOSPITAL_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${HOSPITAL_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer1.hospital.poc-network.com
 CORE_PEER_LOCALMSPID=HospitalMSP
 CORE_PEER_ADDRESS=peer1.hospital.poc-network.com:10051
 CORE_PEER_MSPCONFIGPATH=${HOSPITAL_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${HOSPITAL_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer0.kindergarten.poc-network.com
 CORE_PEER_LOCALMSPID=KindergartenMSP
 CORE_PEER_ADDRESS=peer0.kindergarten.poc-network.com:11051
 CORE_PEER_MSPCONFIGPATH=${KINDERGARTEN_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${KINDERGARTEN_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # Installing smart contract on peer1.kindergarten.poc-network.com
 CORE_PEER_LOCALMSPID=KindergartenMSP
 CORE_PEER_ADDRESS=peer1.kindergarten.poc-network.com:12051
 CORE_PEER_MSPCONFIGPATH=${KINDERGARTEN_MSPCONFIGPATH}
 CORE_PEER_TLS_ROOTCERT_FILE=${KINDERGARTEN_TLS_ROOTCERT_FILE}
-peer chaincode install -n poc_kinder -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
+peer chaincode install -n kindergarten-contract -v 1.0 -p "$CC_SRC_PATH_2" -l "$CC_RUNTIME_LANGUAGE"
 
 # INSTANTIATING SMART CONTRACT ON CHANNELS
 # Instantiating smart contract on parentshospital
@@ -198,7 +198,7 @@ CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 peer chaincode instantiate \
     -o orderer.poc-network.com:7050 \
     -C parentshospital \
-    -n poc \
+    -n medical-contract \
     -l "$CC_RUNTIME_LANGUAGE" \
     -v 1.0 \
     -c '{"Args":["a","20"]}' \
@@ -214,7 +214,7 @@ CORE_PEER_MSPCONFIGPATH=${PARENTS_MSPCONFIGPATH}
 peer chaincode instantiate \
     -o orderer.poc-network.com:7050 \
     -C parentshospitalkindergarten \
-    -n poc_kinder \
+    -n kindergarten-contract \
     -l "$CC_RUNTIME_LANGUAGE" \
     -v 1.0 \
     -c '{"Args":["a","20"]}' \

@@ -25,8 +25,8 @@ It is also necessary to put smart contracts on the network. Here are the command
 ```
 git clone https://gitlab.nixdev.co/poc-blockchain/network.git
 cd network && mkdir chaincode && cd chaincode
-git clone https://gitlab.nixdev.co/poc-blockchain/smart-contract.git poc
-git clone https://gitlab.nixdev.co/poc-blockchain/poc_kinder.git
+git clone https://gitlab.nixdev.co/poc-blockchain/smart-contract.git medical-contract
+git clone https://gitlab.nixdev.co/poc-blockchain/poc_kinder.git kindergarten-contract
 ```
 On the first server, we will create all the necessary certificates necessary for the operation of our network:
 ```

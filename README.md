@@ -23,10 +23,10 @@ The network is installed on 4 servers using Docker Swarm. All servers must have 
 
 It is also necessary to put smart contracts on the network. Here are the commands for all four servers:
 ```
-git clone https://gitlab.nixdev.co/poc-blockchain/network.git
+git clone https://github.com/nixsolutions/blockchain-poc-network.git network
 cd network && mkdir chaincode && cd chaincode
-git clone https://gitlab.nixdev.co/poc-blockchain/medical-contract.git
-git clone https://gitlab.nixdev.co/poc-blockchain/kindergarten-contract.git
+git clone https://github.com/nixsolutions/blockchain-poc-medical-contract.git medical-contract
+git clone https://github.com/nixsolutions/blockchain-poc-kindergarten-contract.git kindergarten-contract
 ```
 On the first server, we will create all the necessary certificates necessary for the operation of our network:
 ```
